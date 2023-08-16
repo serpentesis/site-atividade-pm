@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Logar em Pétala Rosa">
+    <meta name="keywords" content="petala mística, esoterico, espiritualidade, bruxaria">
+    <meta name="author" content="Alexandra Moura//Serpentesis">
+    <title> Loja Pétala Mística </title>
+    <!-- LINK ÍCONE NAV-->
+    <link rel="icon" type="image/svg" href="assets/img/petalarosa-logo-icon.svg" />
+    <!-- LINK FRAMEWORK BOOTSTRAP *em cima do css por ser prioridade-->
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <!-- LINK ESTILO CONFIGURAÇÃO PERSONALIZADA-->
+    <link rel="stylesheet" href="style.css">
+    <!-- LINK FONTAWESOME FERRAMENTA DE SVG-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="index.html">
+                <img src="assets/img/petalarosa-logo.svg" alt="Pétala Mística Logo">
+                <span class="text-uppercase ms-2"> Pétala Mística </span>
+            </a>
+            <!-- ÍCONES -->
+            <div class="order-lg-2 nav-btns">
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-black"> 4 </span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-black"> 3 </span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-search"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-black"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-user"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-black"></span>
+                </button>
+            </div>
+            <!-- ÍCONE MENU-->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- LINKS (REL COM O MENU EM MOBILE; erro: clicar no menu e não aparecer os links) -->
+            <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="#inicio"> Início </a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="#catalogo"> Catálogo </a>
+                    </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="#c-especial"> Coleções </a>
+                    </li>
+                    <li class="nav-item px-2 py-2 border-0">
+                        <a class="nav-link text-uppercase text-dark" href="#sobrenos"> Sobre Nós </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIM NAVBAR -->
+
+    <!-- HEADER -->
+    <header id="inicio" class="vh-100 carousel slide" data-bs-ride="carousel" style="padding-top: 104px;"> <!-- tamanho altura em dispositivos-->
+        <div class="container h-100 d-flex align-items-center carousel-inner">
+            <div class="text-center carousel-item active">
+                <h2 class="text-white"> Melhores coleções </h2>
+                <h1 class="text-white text-uppercase py-2 fw-bold"> Novas magias estão a caminho </h1>
+                <a id="botao-comprar-agora" href="#" class="btn mt-3 text-uppercase ">Comprar Agora</a>
+            </div>
+            <div class="text-center carousel-item active">
+                <h2 class="text-white"> Melhores preços e descontos em </h2>
+                <h1 class="text-white text-uppercase py-2 fw-bold"> Jóias, Incensos, Ervas e + </h1>
+                <a id="botao-comprar-agora" href="#" class="btn mt-3 text-uppercase ">Comprar Agora</a>
+            </div>
+        </div> <!-- fim div container-->
+        <!-- setas do slider - esquerda -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <!-- setas do slider - direita -->
+        <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </header>
+
+    <!-- FIM HEADER-->
+
+    <!-- CATALOGO - SECTION -->
+    <section id="catalogo" class="py-5">
+        <div class="container">
+            <div class="title text-center">
+                <h2 class="position-relative d-inline-block"> Catálogo </h2>
+            </div>
+
+            <div class="row g-0">
+                <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type="button" class="text-uppercase btn m-2 text-white active-filter-btn " data-filter="*"> Geral </button>
+                    <button type="button" class=" text-uppercase btn m-2 text-white" data-filter=".maisvendidos"> Mais Vendidos </button>
+                    <button type="button" class=" text-uppercase btn m-2 text-white" data-filter=".maisavaliados"> Mais Avaliados </button>
+                    <button type="button" class="text-uppercase btn m-2 text-white" data-filter=".novidades"> Novidades </button>
+                </div>
+
+                <div class="catalogo-lista mt-4 row gx-0 gy-3">
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 maisvendidos">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-1.jpg" class="w-100">
+
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Essência Pétala Rosé </p>
+                            <span class="fw-bold"> R$ 35,90 </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 maisvendidos">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-2.jpg" class="w-100">
+
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Essência Cravo&Canella </p>
+                            <span class="fw-bold"> R$ 35,90 </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 maisavaliados">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-3.jpg" class="w-100">
+
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Kit Essência EcoBreath </p>
+                            <span class="fw-bold"> R$ 107,70 </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 maisavaliados">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-4.jpg" class="w-100">
+                        </div>
+                        <!-- estrelas -->
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Diário Sketchbook Místico </p>
+                            <span class="fw-bold"> R$ 80,00 </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 maisvendidos">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-5.jpg" class="w-100">
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Kit Cristais Terrosos </p>
+                            <span class="fw-bold"> R$ 250,00 </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 maisavaliados">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-6.jpg" class="w-100">
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Velas Aromáticas </p>
+                            <span class="fw-bold"> R$ 28,90 </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 novidades">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-7.jpg" class="w-100">
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Colar Astrológico </p>
+                            <span class="fw-bold"> R$ 18,90 </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-3 novidades">
+                        <div class="catalogo-img">
+                            <img src="assets/img/catalogo-8.jpg" class="w-100">
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                                <span class="text-primary"><i class=" fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1"> Estátua Deusa Hékate </p>
+                            <span class="fw-bold"> R$ 350,00 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- fim div container -->
+    </section>
+
+    <!-- FIM CATALOGO -->
+
+    <!-- COLEÇÃO ESPECIAL -->
+
+    <section id="c-especial" class="py-5">
+        <div class="container">
+            <div class="title text-center py-5">
+                <h2 class="position-relative d-inline-block text-capitalize"> Coleção Especial </h2>
+            </div>
+
+            <div class="colecao-especial row g-0">
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="c-especial-img position-relative overflow-hidden">
+                        <img src="assets/img/colecao-especial-1.jpg" class="w-100">
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1"> Colar Rainha de Ouros </p>
+                        <span class="fw-bold d-block"> R$ 85,00 </span>
+                        <a href="#" class="text-white btn btn-primary mt-3"> Adicionar ao carrinho</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="c-especial-img position-relative overflow-hidden">
+                        <img src="assets/img/colecao-especial-2.jpg" class="w-100">
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1"> Colar Bruxa Primitiva </p>
+                        <span class="fw-bold d-block"> R$ 80,00 </span>
+                        <a href="#" class="text-white btn btn-primary mt-3"> Adicionar ao carrinho</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="c-especial-img position-relative overflow-hidden">
+                        <img src="assets/img/colecao-especial-3.jpg" class="w-100">
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1"> Cristal Ametista </p>
+                        <span class="fw-bold d-block"> R$ 280,00 </span>
+                        <a href="#" class="text-white btn btn-primary mt-3"> Adicionar ao carrinho</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="c-especial-img position-relative overflow-hidden">
+                        <img src="assets/img/colecao-especial-4.jpg" class="w-100">
+                    </div>
+                    <div class="text-center">
+                        <p class="text-capitalize mt-3 mb-1"> Japamala Shakti 180 Contas </p>
+                        <span class="fw-bold d-block"> R$ 95,00 </span>
+                        <a href="#" class="text-white btn btn-primary mt-3"> Adicionar ao carrinho</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM COLEÇÃO ESPECIAL -->
+
+    <!-- BANNER PROMOÇÃO -->
+    <section id="promocao" class="py-5">
+        <div class="container">
+            <div class="row d-flex align-items-center text-center">
+                <div class="banner-promocao">
+                    <span class="text-white"> Descontos acima de 40% </span>
+                    <h2 class="mt-2 mb-4 text-white">
+                        Promoção na Pétala Mística!
+                    </h2>
+                    <a href="#" class="btn text-uppercase"> Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIM BANNER PROMOÇÃO -->
+
+
+    <!-- QUERIDINHOS DA SEMANA -->
+    <section id="queridinhos" class="py-5">
+        <div class="container">
+            <div class="title text-center pt-3 pb-5">
+                <h2 class="position-relative d-inline-block ms-4"> Queridinhos da Semana </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 row g-3">
+                    <h3 class="fs-5"> Top 3 Avaliados </h3>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/mais-avaliados-1.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"><span style="color: var(--purpura);"> 1.</span> Estátua Deusa Hékate </p>
+                            <span> R$ 350,00 </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/mais-avaliados-2.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"><span style="color: var(--purpura);"> 2.</span> Oráculo Mulher da Lua </p>
+                            <span> R$ 200,00 </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/mais-avaliados-3.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> <span style="color: var(--purpura);"> 3.</span> Incenso Hindu </p>
+                            <span> R$ 40,00 </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4 row g-3">
+                    <h3 class="fs-5"> Mais Comprados </h3>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/mais-vendidos-1.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> Colar Astrológico </p>
+                            <span> R$ 18,90 </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/mais-vendidos-2.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> Cristal Ágata de Fogo </p>
+                            <span> R$ 20,00 </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/mais-vendidos-3.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> Kit Quartzo Rosa </p>
+                            <span> R$ 60,00 </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4 row g-3">
+                    <h3 class="fs-5"> Em Promoção </h3>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/em-promocao-1.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> Palo Santo </p>
+                            <span> R$ 15,00 </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/em-promocao-2.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> Colar Del'lune </p>
+                            <span> R$ 28,90 </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-start">
+                        <img src="assets/img/em-promocao-3.jpg" class="img-fluid pe-3 w-25">
+                        <div>
+                            <p class="fw-bold mb-0"> Incenso Terapêutico Shiva </p>
+                            <span> R$ 29,00 </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </section>
+    <!-- FIM QUERIDINHOS DA SEMANA -->
+
+
+    <!-- SOBRE NÓS -->
+    <section id="sobrenos" class="py-5">
+        <div class="container">
+            <div class="row lg-5 align-items-center">
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                    <div class="title pt-3 pb-5">
+                        <h2 class="position-relative d-inline-block ms-4"> Sobre Nós </h2>
+                    </div>
+                    <p class="load text-muted"> Um gostinho das protagonistas por trás do Pétala Rosa </p>
+                    <p> Desabrochando de um local de muito conhecer, nossa marca tem como objetivo perfumar, embelezar e terapeutizar os corações das mulheres que vibram de energia feminina. Atuamos para ser ponte entre o sagrado e o mistério que é ser e se entender como mulher. </p>
+                </div>
+                <div class="col-lg-6 order-lg-0">
+                    <img src="assets/img/sobre-nos.jpg" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM SOBRE NÓS -->
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="title text-center pt-3 pb-5">
+                    <h2 class="position-relative d-inline-block ms-4"> Newsletter </h2>
+                </div>
+                <p class="text-center text-muted"> Gostaria de receber nossas novidades, promoções e artigos? Inscreva-se para a newsletter do Pétala Mística e não perca nem um segundinho do que está rolando. </p>
+                <div class="input-group mb-3 mt-3">
+                    <input type="text" class="form-control" placeholder="Digite seu melhor e-mail">
+                    <button class="btn btn-primary" type="submit"> Inscrever-se </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIM NEWSLETTER -->
+
+    <!-- FOOTER -->
+    <section class="bg-dark py-5">
+        <div class="container">
+            <div class="row text-white g-4">
+                <div class="col-md-2 col-lg-4">
+                    <a id="link-logo-footer" href="index.html" class=" text-decoration-none brand text-white"> Pétala Mística </a>
+                    <p class="text-white text-muted mt-3"> Florescendo a beleza de viver em mulheres poderosas como você! </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="fw-light"> Links </h5>
+                    <ul class="list-unstyled">
+                        <li class="my-3">
+                            <a class="text-decoration-none text-white" href="#inicio">
+                                <i class="fas fa-arrow-right-long me-1"></i>
+                                Início
+                            </a>
+                        </li>
+
+                        <li class="my-3">
+                            <a class="text-decoration-none text-white" href="#catalogo">
+                                <i class="fas fa-arrow-right-long me-1"></i>
+                                Catálogo
+                            </a>
+                        </li>
+
+                        <li class="my-3">
+                            <a class="text-decoration-none text-white" href="#c-especial">
+                                <i class="fas fa-arrow-right-long me-1"></i>
+                                Coleções
+                            </a>
+                        </li>
+
+                        <li class="my-3">
+                            <a class="text-decoration-none text-white" href="#sobrenos">
+                                <i class="fas fa-arrow-right-long me-1"></i>
+                                Sobre Nós
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="fw-light mb-3"> Contato </h5>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-white text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light"> Rua Brasil, nº17, Salvador - BA </span>
+                    </div>
+
+                    <div class="d-flex justify-content-start align-items-start my-2 text-white text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="fw-light"> petalamistica.contato@gmail.com </span>
+                    </div>
+
+                    <div class="d-flex justify-content-start align-items-start my-2 text-white text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="fw-light"> (71) 98888-8888 </span>
+                    </div>
+                </div>
+                <p class="row-cols-lg-2">
+                    <br>
+                    Consulte os Termos de Política e Privacidade. <span style="font-family: var(--fonte-pr); text-align: center;"><b> Pétala Mística </span> © Todos os Direitos Reservados.</b>
+                </p>
+
+            </div>
+
+
+
+
+
+    </section>
+
+
+    <!-- FIM FOOTER -->
+
+    <!-- FRAMEWORK JQuery -->
+    <script src="assets/js/jquery-3.7.0.js"></script>
+    <!-- ISOTOPE JS -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- BOOTSTRAP DO JS -->
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <!-- MEU SCRIPT-->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

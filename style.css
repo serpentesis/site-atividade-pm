@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@400;500;700&display=swap');
+
+/* Criando Estilos Raiz (Variáveis do CSS) */
+:root {
+    --fonte-pr: 'Marcellus', serif;
+    --fonte-sec: 'Nunito', sans-serif;
+    --rosa: #a30a2c;
+    --amarelo: #f3c10a;
+    --lilas: #c0a5b4;
+    --purpura: #471330;
+}
+
+body {
+    font-family: var(--fonte-sec);
+}
+
+/* BOTÃO CONFIG 
+pr: variável não mudando cor*/
+.bg-black {
+    background-color: var(--purpura) !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* tamanho da logo */
+.navbar-brand img {
+    width: 35px;
+}
+
+.navbar-brand span {
+    letter-spacing: 2px;
+    font-family: var(--fonte-pr);
+}
+
+.nav-link:hover {
+    color: var(--purpura) !important;
+}
+
+.nav-item {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER CONFIG */
+
+#inicio {
+    background: url(assets/img/header-img.jpg) top/cover no-repeat;
+}
+
+.btn:not(.nav-btns button) {
+    /* seleciona todos os elementos com a classe btn que não são botões da classe nav-btns*/
+    background-color: #8a0a4e;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 28px;
+    border: 2px solid #e6bd09c4;
+}
+
+.btn:not(.nav-btns button):hover {
+    color: #fff;
+    border: 2px solid #940b5fab;
+    background-color: #85054b;
+}
+
+.carousel-inner h1 {
+    font-size: 48px;
+    font-family: var(--fonte-pr);
+}
+
+/* .carousel-item .btn {
+    border-color: var(--amarelo) !important;
+} */
+
+/* CATÁLOGO - SECTION - STYLE */
+
+.title h2::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--purpura);
+    border-radius: 8px;
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.active-filter-btn {
+    background-color: var(--purpura) !important;
+    color: #fff !important;
+    border-color: var(--purpura) !important;
+}
+
+.text-primary {
+    color: #f3c10a !important;
+}
+
+.filter-button-group .btn:hover {
+    color: #fff !important;
+}
+
+.catalogo-img img {
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* COLEÇÃO ESPECIAL */
+
+
+.btn-primary {
+    padding: 8px 20px !important;
+    background-color: var(--purpura);
+}
+
+.c-especial-img img {
+    transition: all 0.3s ease;
+}
+
+.c-especial-img:hover img {
+    transform: scale(1.2);
+}
+
+
+/* BANNER DE PROMOCAO */
+
+#promocao {
+    background: url(assets/img/banner-promocao-img.jpg) center/cover no-repeat;
+}
+
+#promocao .row {
+    min-height: 60vh;
+}
+
+.banner-promocao span {
+    font-size: 28px;
+}
+
+.banner-promocao h2 {
+    font-size: 48px;
+    font-family: var(--fonte-pr);
+}
+
+/* QUERIDINHOS */
+
+#queridinhos {
+    background-color: rgba(179, 179, 179, 0.05);
+}
+
+/* NEWSLETTER */
+
+#newsletter {
+    background-color: rgba(179, 179, 179, 0.05);
+}
+
+#newsletter p {
+    max-width: 600px;
+}
+
+#newsletter .input-group {
+    max-width: 500px;
+}
+
+
+/* FOOTER */
+
+#link-logo-footer {
+    font-family: var(--fonte-pr);
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media(min-width: 992px) {
+    .nav-item {
+        border-bottom: none;
+    }
+}

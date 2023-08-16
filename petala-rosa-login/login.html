@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Logar em Pétala Rosa">
+    <meta name="keywords" content="login, login page">
+    <meta name="author" content="Alexandra Moura//Serpentesis">
+    <title> Login </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- att: a mensagem de sucesso e erro não estão estáticas-->
+    <!-- COMEÇO -->
+    <div class="main-login">
+
+        <!-- COLUNA ESQUERDA LOGO -->
+        <div class="left-login">
+
+            <img src="petala-r-login-log.svg" class="left-login-image">
+        </div>
+
+        <!-- COLUNA DIREITA DADOS -->
+        <div class="right-login">
+            <div class="card-login">
+                <h1> LOGIN </h1>
+
+                <div class="textfield">
+                    <label for="user"> Usuário </label>
+                    <input required id="user" type="text" name="user" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="password"> Senha </label>
+                    <input required id="password" type="password" name="password" placeholder="Senha">
+                </div>
+                <button class="raise but" onclick="submitForm()" value="Entrar"> Entrar </button>
+
+            </div>
+
+            <div class="message" id="message">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const feedbackElement = document.getElementById('message');
+
+        passwordInput.addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                submitForm();
+            }
+        });
+
+        function submitForm() {
+            const user = document.getElementById('user').value;
+            const password = document.getElementById('password').value;
+
+            // Simulação de verificação de login (usuário: "usuario", senha: "senha123")
+            if (user === 'usuario' && password === 'senha123') {
+                showSuccessMessage('Login bem-sucedido! Redirecionando...');
+                setTimeout(function () {
+                    window.location.href = '/index.html';
+                }, 2000);
+            } else {
+                showErrorMessage('Usuário ou senha inválidos, tente novamente.');
+            }
+        }
+
+        function showErrorMessage(message) {
+            feedbackElement.textContent = message;
+            feedbackElement.style.color = 'red';
+        }
+
+        function showSuccessMessage(message) {
+            feedbackElement.textContent = message;
+            feedbackElement.style.color = 'green';
+        }
+
+        function showMessage(message, messageType) {
+            messageElement.textContent = message;
+            messageElement.classList.add(messageType);
+            setTimeout(function () {
+                messageElement.textContent = '';
+                messageElement.classList.remove(messageType);
+            }, 3000); // Remover a mensagem após 3 segundos
+        }
+    </script>
+
+
+</body>
+
+</html>
